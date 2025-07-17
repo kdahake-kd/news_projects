@@ -1,0 +1,52 @@
+
+{% extends 'news/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<main class="container mt-5">
+  <section class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-header bg-primary text-white text-center">
+          <h3 class="mb-0">Register</h3>
+        </div>
+        <div class="card-body">
+          <form method="POST" action="{% url 'register' %}" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="form-control"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                placeholder="Enter a password"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+          </form>
+        </div>
+        <div class="card-footer text-center">
+          <p class="mb-0">
+            Already have an account?
+            <a href="{% url 'login' %}" class="text-decoration-none">Login</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+

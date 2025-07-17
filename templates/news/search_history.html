@@ -1,0 +1,11 @@
+<!-- templates/search_history.html -->
+
+{% for keyword in keyword_searches %}
+    <div class="keyword-block">
+        <h3>{{ keyword.keyword }}</h3>
+        <p>Last refreshed: {{ keyword.last_refreshed|timesince }} ago</p>
+        <a href="{% url 'refresh_news' keyword.id %}" class="btn btn-primary">
+            🔄 Refresh News
+        </a>
+    </div>
+{% endfor %}

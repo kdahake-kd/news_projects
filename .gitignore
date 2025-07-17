@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.sqlite3
+.env
+venv/
+.env.*
+db.sqlite3
+*.log
+*.pot
+*.pyc
+.DS_Store
+*.swp
+.idea/
+*.egg-info/
+celerybeat-schedule
+
+# Python
+
+*.pyo
+*.pyd
+
+# Env
+env/
+.venv/
+
