@@ -19,3 +19,10 @@ def refresh_all_keywords(self):
     except Exception as e:
         logger.critical(f"Failed refresh_all_keywords task: {str(e)}")
 
+# for testing the code
+@shared_task
+def test_celery_task():
+    print("Task started")
+    time.sleep(5)
+    print("Task finished")
+    return "Done"
