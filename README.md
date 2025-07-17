@@ -147,10 +147,8 @@ If Celery worker is running, you'll see output from the task execution.
 
 ```
 news_project/
-├── news/                # Main app
-├── users/               # Auth app
-├── templates/           # HTML templates
-├── static/              # Static files
+├── news/                # Main app             
+├── templates/           # HTML templates          
 ├── news_project/        # Django settings
 ├── .env                 # API keys and secrets
 ├── requirements.txt
